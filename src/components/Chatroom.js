@@ -1,6 +1,7 @@
 import React from 'react'
 import Message from './Message'
 
+
 class Chatroom extends React.Component {
 	constructor() {
 		super()
@@ -67,9 +68,11 @@ class Chatroom extends React.Component {
 						placeholder="User A types here"/>
 					<button onClick={this.handleUserAClick}>Send</button>
 				</div>
-				<div>
+				<div className="chatwindow">
 					<p>Chat Window</p>
-					{updatedChat}
+					<div className="chatbox">
+						{updatedChat}
+					</div>
 				</div>
 				<div>
 					<input 

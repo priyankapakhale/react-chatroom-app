@@ -1,16 +1,24 @@
 import React from 'react'
 
+
 function Message(props) {
-	let message 
+	const styles = {
+		backgroundColor : "white",
+		minWidth : "50px"
+	}
+	
 	if(props.data.user === "userA") {
-		message = "User A : "+props.data.message
+		styles.alignSelf = "flex-start"
 	}
 	else {
-		message = props.data.message + " : User B"
+		styles.alignSelf = "flex-end"
+		styles.backgroundColor = "orange"
 	}
 
 	return (
-		<p>{message}</p>
+		<div className="message" style={styles}>
+			<p>{props.data.message}</p>
+		</div>
 	)
 }
 
