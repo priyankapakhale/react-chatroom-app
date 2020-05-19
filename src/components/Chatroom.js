@@ -2,7 +2,19 @@ import React from 'react'
 
 function Chatroom() {
 	return (
-		<p>chatroom</p>
+		<div className="main">
+			<div>
+				<input type="text" name="messageA" />
+				<button>Send</button>
+			</div>
+			<div>
+				<p>Chat window</p>
+			</div>
+			<div>
+				<input type="text" name="messageA" />
+				<button>Send</button>
+			</div>
+		</div>
 	)
 }
 
