@@ -7,7 +7,6 @@ class Chatroom extends React.Component {
 		this.state = {
 			messageA : "",
 			messageB : "",
-			user : "",
 			chat : []
 		}
 		this.handleChange = this.handleChange.bind(this)
@@ -23,14 +22,40 @@ class Chatroom extends React.Component {
 	}
 
 	handleUserAClick() {
-
+		const updatedChat = this.state.chat
+		const newMessage = {
+			user : "userA",
+			message : this.state.messageA
+		}
+		updatedChat.push(newMessage)
+		this.setState({
+			messageA : "",
+			messageB : "",
+			chat : updatedChat
+		})
 	}
 
 	handleUserBClick() {
-
+		const updatedChat = this.state.chat
+		const newMessage = {
+			user : "userB",
+			message : this.state.messageB
+		}
+		updatedChat.push(newMessage)
+		this.setState({
+			messageA : "",
+			messageB : "",
+			chat : updatedChat
+		})
 	}
 
 	render() {
+		const updatedChat = this.state.chat.map(message => {
+			return (
+				<Message data={message} />
+			)
+		})
+
 		return (
 			<div className="main">
 				<div>
@@ -44,7 +69,7 @@ class Chatroom extends React.Component {
 				</div>
 				<div>
 					<p>Chat Window</p>
-					<Message />
+					{updatedChat}
 				</div>
 				<div>
 					<input 
