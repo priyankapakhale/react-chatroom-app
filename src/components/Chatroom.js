@@ -1,10 +1,10 @@
 import React from 'react'
+import Message from './Message'
 
 class Chatroom extends React.Component {
 	constructor() {
 		super()
 		this.state = {
-		
 		}
 	}
 
@@ -17,6 +17,7 @@ class Chatroom extends React.Component {
 				</div>
 				<div>
 					<p>Chat Window</p>
+					<Message />
 				</div>
 				<div>
 					<input type="text" name="messageA" />
