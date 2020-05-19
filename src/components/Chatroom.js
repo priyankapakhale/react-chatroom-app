@@ -8,9 +8,14 @@ class Chatroom extends React.Component {
 			messageA : "",
 			messageB : ""
 		}
+		this.handleChange = this.handleChange.bind(this)
 	}
 
 	handleChange(event) {
+		const {name, value} = event.target
+		this.setState({
+			[name] : value
+		})
 
 	}
 
@@ -18,7 +23,12 @@ class Chatroom extends React.Component {
 		return (
 			<div className="main">
 				<div>
-					<input type="text" name="messageA" value={this.state.messageA} placeholder="User A types here"/>
+					<input 
+						type="text" 
+						name="messageA" 
+						onChange={this.handleChange}
+						value={this.state.messageA} 
+						placeholder="User A types here"/>
 					<button>Send</button>
 				</div>
 				<div>
@@ -26,7 +36,12 @@ class Chatroom extends React.Component {
 					<Message />
 				</div>
 				<div>
-					<input type="text" name="messageA" value={this.state.messageB} placeholder="User B types here" />
+					<input 
+						type="text" 
+						name="messageB" 
+						onChange={this.handleChange}
+						value={this.state.messageB} 
+						placeholder="User B types here" />
 					<button>Send</button>
 				</div>
 			</div>
