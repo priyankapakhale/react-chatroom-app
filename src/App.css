@@ -1,3 +1,29 @@
+.main {
+  margin-top : 50px;
+  display : flex;
+}
+
+.main div {
+  flex : 30% ;
+}
+
+input {
+  width: 220px;
+  margin-right: 20px;
+  height : 25px;
+  border: 1px solid lightgray;
+  border-radius : 5px;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  border : 1px;
+  border-radius: 5px;
+  background-color : lightblue;
+}
+
+
 .App {
   text-align: center;
 }
