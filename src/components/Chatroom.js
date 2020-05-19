@@ -11,7 +11,8 @@ class Chatroom extends React.Component {
 			chat : []
 		}
 		this.handleChange = this.handleChange.bind(this)
-		this.handleClick = this.handleClick.bind(this)
+		this.handleUserAClick = this.handleUserAClick.bind(this)
+		this.handleUserBClick = this.handleUserBClick.bind(this)
 	}
 
 	handleChange(event) {
@@ -21,7 +22,11 @@ class Chatroom extends React.Component {
 		})
 	}
 
-	handleClick() {
+	handleUserAClick() {
+
+	}
+
+	handleUserBClick() {
 
 	}
 
@@ -35,7 +40,7 @@ class Chatroom extends React.Component {
 						onChange={this.handleChange}
 						value={this.state.messageA} 
 						placeholder="User A types here"/>
-					<button onClick={this.handleClick}>Send</button>
+					<button onClick={this.handleUserAClick}>Send</button>
 				</div>
 				<div>
 					<p>Chat Window</p>
@@ -48,7 +53,7 @@ class Chatroom extends React.Component {
 						onChange={this.handleChange}
 						value={this.state.messageB} 
 						placeholder="User B types here" />
-					<button onClick={this.handleClick}>Send</button>
+					<button onClick={this.handleUserBClick}>Send</button>
 				</div>
 			</div>
 		)
